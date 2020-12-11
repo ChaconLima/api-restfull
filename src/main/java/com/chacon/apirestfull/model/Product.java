@@ -17,13 +17,17 @@ public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     private long id;
+
     private String name;
     private BigDecimal quantidiry;
     private BigDecimal value;
 
+ 
     //functions get returns
+    public long getId(){
+        return id;
+    }
     public String getName() {
         return name;
     }
@@ -37,6 +41,9 @@ public class Product implements Serializable {
     }
 
     //functions set returns
+    public void setId(long id){
+        this.id= id;
+    }
     public void setName(String name) {
         this.name = name;
     }
