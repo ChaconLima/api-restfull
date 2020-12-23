@@ -1,4 +1,4 @@
-package com.chacon.apirestfull.service;
+package com.chacon.apirestfull.service.auth;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
