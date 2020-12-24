@@ -1,7 +1,5 @@
 package com.chacon.apirestfull.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import com.chacon.apirestfull.dto.user.request.UserDto;
 import com.chacon.apirestfull.dto.user.request.UserLogin;
 import com.chacon.apirestfull.dto.user.response.UserToken;
@@ -9,10 +7,8 @@ import com.chacon.apirestfull.model.User;
 import com.chacon.apirestfull.service.auth.Authentication;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,9 +31,9 @@ public class UserController {
         return authorization.login(userDto);
     }
 
-    @GetMapping(value="status")
-    public String userStatus(@RequestHeader(value="Authorization") String authToken, HttpServletRequest request){
-        return authorization.status(authToken);
-        // return authToken;
-    }
+    // @GetMapping(value="status")
+    // public String userStatus(@RequestHeader(value="Authorization") String authToken, HttpServletRequest request){
+    //     return authorization.status(authToken);
+    //     // return authToken;
+    // }
 }

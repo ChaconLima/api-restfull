@@ -39,19 +39,17 @@ public class Authentication {
         } catch (Exception e) {
             return false;
         }
-       
-
     }
     
-    public String status(String auth_token){
+    public boolean status(String auth_token){
 
         if(validateToken(auth_token))
         {
-            return "conectado";
+            return true;
         }
         else
         {
-            return "Não conectado";
+            return false;
         }
     }
     public User register( UserDto userDto){

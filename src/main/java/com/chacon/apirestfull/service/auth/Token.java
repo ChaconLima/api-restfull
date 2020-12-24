@@ -10,7 +10,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 public class Token {
 
-    private static final long expirationToken = 1800000;
+    private final long expirationToken = 1800000;
     private String key = "authentication";
 
     public String generateToken(User user) {
